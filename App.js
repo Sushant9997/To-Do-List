@@ -10,6 +10,11 @@ export default function App() {
 
 
   const addListHandler = (listTitle) => {
+      if(listTitle.length === 0)
+{
+    return;
+}
+
     setAddItem(currentList => [
       ...addItem,
       { id: Math.random().toString(), value: listTitle }]);
